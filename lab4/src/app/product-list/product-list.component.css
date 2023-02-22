@@ -1,5 +1,5 @@
 .title_name {
-  display: flex;
+  display:inline-flex;
   justify-content: left;
 }
 
@@ -18,7 +18,9 @@ can be found in the LICENSE file at https://angular.io/license
   display: inline;
   cursor: pointer;
 }
-
+.product-rating{
+  font-style: bold;
+}
 button{
   margin:20px;
   margin-bottom: 20px;
