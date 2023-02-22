@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spin-off of "Project: Event invite"</title>
+        <style>
+            body{
+                text-align: center;
+                font-family: cursive;
+                background: rgb(233, 223, 242);
+                height: 100%;
+                width: 100%;
+                overflow-y:auto;
+                margin:0;
+                padding:0;
+                
+                font-family: serif;
+                color:rgb(82, 71, 48);
+            }
+         
+            
+            h1{ 
+                margin-top: 40px; 
+                margin-bottom: 10px;
+                font-size:2.5em;
+            }
+            
+            h2{
+                font-style: italic;
+                margin: 10px;
+                font-size:1.7em;
+            }
+            
+            #rsvp{
+                width:100px;
+                height:50px;
+                border:solid 3px rgb(126, 151, 191);
+                box-shadow: 0px 2px 10px rgb(134, 90, 150);
+                border-radius: 10px;
+                background: rgb(217, 193, 216);
+                margin:50px auto;
+                font-size:1.2em;
+                font-weight:bold;
+            }
+            
+            #line, #line2{
+                background:rgb(186, 132, 24);
+                color:rgb(186, 132, 24);
+                width: 40%;
+                position:relative;
+                height:2px;
+                border:0;
+                display:inline-block;
+            }
+            
+           
+            
+            #line{margin-right:15px;}
+            #line2{margin-left:18px;}
+            
+            .to{
+                font-size:12px;
+                margin: 0;
+            }
+            
+            #font{
+                list-style:none;
+                padding:0;
+                margin:0 auto;
+                width:80%;
+                
+            }
+            
+            #font li{
+                display:inline-block;
+                text-align:center;
+                font-size: 1.1em;
+            }
+            
+            #font li.one{
+                font-family: fantasy;
+            }
+            
+            .detail{
+                margin: 20px 0;
+            }
+            
+            .venue{
+                font-size: 1.4em;
+                font-weight:bold;
+            }
+            
+        </style>
+    </head>
+    <body>
+       <p id="borderimg3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Venetia_and_Russ_Wedding.png/800px-Venetia_and_Russ_Wedding.png" width="200"></p>
+        <h1>You're invited!</h1>
+        <span class="to">to</span>
+        <h2>Wedding </h2>
+        <h2> Lea & Shawn </h2>
+        <hr id="line" color="#BA2"><hr id="line2" color="#BA2">
+        <div class="detail">
+            <p class="to"></p>
+            <ul id="font">
+                <li class="one">Invite you to celebrate their wedding! </li><br>
+              
+            </ul> <br>
+            <p class="to">Where & when ?</p>
+        </div>
+        <hr id="line" color="#BA2"><hr id="line2" color="#BA2">
+        <div class="detail">
+            <span class="venue">New York 12 st.</span><br>
+            <span class="venue">7PM</span>
+        </div>
+        
+        <button action="#rsvp" id="rsvp">RSVP</button>
+        
+    </body>
+</html>
