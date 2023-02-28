@@ -1,0 +1,43 @@
+.button{
+    position: absolute;
+    border: 1px solid #1d1b1b;
+    height : 50px;
+    left: 370px;
+    right:
+}
+.title_name {
+  display: flex;
+  justify-content: left;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .items {
+    width: 300px;
+    height: 600px;
+    margin: 20px;
+    
+  }
+  .img-container img{
+    height: auto; 
+    width: auto; 
+    margin-left: 60px;
+    max-width: 100px; 
+    max-height: 90px;
+    display: inline;
+    cursor: pointer;
+  }
+  .buttons{
+    margin-top: -20px;
+  }
+  
+  .border_items {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(99, 80, 203);
+    margin-bottom: 10px;
+    padding: 3px;
+  }

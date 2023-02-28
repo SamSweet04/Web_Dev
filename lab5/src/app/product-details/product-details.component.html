@@ -1,0 +1,28 @@
+<h2>Product Details</h2>
+<div class = "container">
+<div *ngIf="product">
+  <div class = "items">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <div class = "title_name">
+  <img src = "{{product.image}}" alt = "Product from Kaspi" width = "250" height = "300" >
+  <section class = "gallery">
+    <div class = "container">
+  <div class = "img-container">
+    <div *ngFor="let image of product.images" >
+      <img src={{image}} alt="product image">
+    </div>
+  </div>
+    </div>
+</section>
+  </div> 
+  <div class = "border_items">
+  <p>{{ product.description }}</p>
+  <div class = "buttons">
+  <a href = "https://t.me/share/url?url={{product.link}}&text={text}"><img src = "https://clipground.com/images/telegram-app-logo-png-3.png" alt ="Telegram" height = "50" style = "margin-top: 20px;">  </a>
+  <a href="https://api.whatsapp.com/send?phone=whatsappphonenumber&text={{product.link}}"><img src = "https://clipground.com/images/descargar-logo-de-whatsapp-png-2.png" alt = "Whatsapp" height = "50" style = "margin-left: 20px; margin-top: -50px"></a></div>
+  <div class = "button"> <button type="button"(click)="addToCart(product)"> Buy </button> </div>
+  </div>
+  </div>
+</div>
+</div>
