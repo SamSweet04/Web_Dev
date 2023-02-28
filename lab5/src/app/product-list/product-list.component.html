@@ -18,6 +18,7 @@
 </h3>
   </div>
 <div class="title_name">
+
 <img src = "{{product.image}}" alt = "Product from Kaspi" width = "200px" height = "200">
 <section class = "gallery">
   <div class = "container">
@@ -25,19 +26,22 @@
       <div *ngFor="let image of product.images" >
         <img src={{image}} alt="product image">
       </div>
+    
       </div>
+      <p *ngIf = "product.rating" >
+        {{product.rating}} <img src="http://cdn.onlinewebfonts.com/svg/img_397133.png" height="15" >
+      </p>
+      <p *ngIf= "product.description">
+        Description: {{product.description}}
+      </p>
+      
     </div>
 </section>  
 </div>
 
 
 
-  <p *ngIf= "product.description">
-    Description: {{product.description}}
-  </p>
-   <p *ngIf = "product.rating" >
-     {{product.rating}} <img src="http://cdn.onlinewebfonts.com/svg/img_397133.png" height="15" >
-   </p>
+   
    <div class="btm">
    <a href="{{product.link}}" target='_blank'> <img src ="https://avellum.com/Content/Entities/Deal/561/ru/cover.jpg" alt="Kaspi" height="40">
   </a>
@@ -48,10 +52,11 @@
   </button>
   </a>  
   <div class ="like-button">
-  <button (click)="like(product)">Like</button>
+  <button (click)="like(product)" >Like</button>
   <p>{{ product.likeCount }} likes</p>
   </div>
-  <button (click)="deleteProduct(product)">Delete</button>
+  <div class = "delete-button">
+  <button (click)="deleteProduct(product)">Delete</button></div>
     <!-- <app-product-alerts
   [product]="product" 
   (notify)="onNotify()">

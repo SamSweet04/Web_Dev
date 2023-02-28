@@ -1,0 +1,23 @@
+.category-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .categoryy {
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;
+  }
+  
+  .category-image {
+    width: 120px;
+    height:100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .title_name{
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }

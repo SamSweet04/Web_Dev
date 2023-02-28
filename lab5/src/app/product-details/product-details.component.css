@@ -3,15 +3,23 @@
     border: 1px solid #1d1b1b;
     height : 50px;
     left: 370px;
-    right:
 }
 .title_name {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  
+}
+.title{
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+    margin-left: 280px;
 }
 .container {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    left: 450px;
     justify-content: center;
   }
   
@@ -29,6 +37,12 @@
     max-height: 90px;
     display: inline;
     cursor: pointer;
+  }
+  .img-container{
+    position: relative;
+    top: 10px;
+    left: -445px;
+    margin-bottom: -160px;
   }
   .buttons{
     margin-top: -20px;

@@ -1,9 +1,10 @@
 <a [routerLink]="['/']">
-    <h2>Categories</h2>
-  </a> 
-  <a *ngFor="let category of categories">
-    <h3
-      [title]="category.category"
-      [routerLink]="['/category',category.category]">
-      {{category.category}}</h3>
-  </a>
+<div class="title_name"><h2>Categories</h2></div>
+</a>
+    <div class="category-images">
+  <div *ngFor="let category of categories" class="categoryy">
+    <h3 [title]="category.category" [routerLink]="['/category', category.category]">
+    <img [src]="category.image" alt="{{category.category}} image" class="category-image">
+  </h3>
+</div>
+    </div>
