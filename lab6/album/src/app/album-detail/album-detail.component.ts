@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Album } from '../models';
 import { AlbumService } from '../album.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-album-detail',
@@ -12,11 +13,12 @@ export class AlbumDetailComponent implements OnInit {
       album: Album;
       loaded: boolean;
       albumId!: number;
-      albumTitle!: string; // declared as optional
+      albumTitle!: string;
 
-      constructor(private route: ActivatedRoute, private albumService : AlbumService, private router:Router) {
+      constructor(private route: ActivatedRoute, private albumService : AlbumService, private router:Router, private location: Location) {
       this.album = {} as Album;
       this.loaded = true;
+      
   
       }
       ngOnInit(): void {
@@ -43,11 +45,15 @@ export class AlbumDetailComponent implements OnInit {
         }
       }
     
-      Back() {
-        this.router.navigate(['/albums']);
-      }
+      
+  Back(): void {
+    this.location.back();
+  }
+   goForward(): void {
+    this.location.forward();
+  }
     
-      viewPhotos() {
-        this.router.navigate(['/albums', this.album.id, 'photos']);
-      }
+    viewPhotos() {
+      this.router.navigate(['/albums', this.album.id, 'photos']);
+    }
 }

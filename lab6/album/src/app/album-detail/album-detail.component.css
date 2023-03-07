@@ -1,0 +1,78 @@
+.container {
+    background-color: #FCE4EC;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .main {
+    background-color: #F8BBD0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .info {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #C2185B;
+  }
+  
+  .change-title label {
+    color: #C2185B;
+  }
+  
+  .change-title input {
+    border: 2px solid #C2185B;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  .change-title button {
+    background-color: #C2185B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  .show{
+    background-color: #C2185B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+  
+  a {
+    color: #C2185B;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style back and forward buttons */
+  .back, .forward {
+    background-color: #E75480;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .back:hover, .forward:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  h3 {
+    color: #C2185B;
+  }
+  

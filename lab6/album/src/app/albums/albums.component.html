@@ -1,18 +1,19 @@
-
+<button (click)="Back()" class = "back">Back</button>
+<button (click)="goForward() "class = "forward">Forward</button>
+<div class = "container">
 <h1>Albums List</h1>
-
 <fieldset>
-    <input type = "text" [(ngModel)] = "newAlbum.id"><br/>
-    <textarea [(ngModel)] = "newAlbum.title"></textarea><br/>
+    <input type = "text" [(ngModel)] = "newAlbum" placeholder="Enter name of album">
     <button (click) = "addAlbum()">Add album</button>
 </fieldset>
 <ul *ngIf = "loaded">
-    <li *ngFor = "let album of albums">
+    <li *ngFor = "let album of albums" class = "albums">
        <a routerLink="/albums/{{album.id}}">
-        {{album.id}}  {{album.title}}
+          {{album.id}}.{{album.title}}
     </a>
     <button class="delete" (click)="deleteAlbum(album)">Delete</button>
     </li>
 </ul>
 
 <h3 *ngIf = "!loaded">Posts are loading...</h3>
+</div>

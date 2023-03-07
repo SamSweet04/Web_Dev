@@ -1,0 +1,76 @@
+.container {
+    background-color: #fce4ec; /* light pink */
+    padding: 20px;
+    border-radius: 10px;
+    color: #C2185B; /* pink */
+  }
+  
+  fieldset {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    border: 2px solid #C2185B; /* pink */
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+  
+  button {
+    background-color: #C2185B; /* pink */
+    color: #fff; /* white text */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .albums {
+    background-color: #ebdeef; /* light pink */
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 5px;
+  }
+    /* Style back and forward buttons */
+    .back, .forward {
+        background-color: #E75480;
+        color: white;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      
+      .back:hover, .forward:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      
+  
+  a {
+    color: #C2185B; /* pink */
+    text-decoration: none;
+  }
+  
+  .delete {
+    background-color: #E75480; /* pink */
+    color: #fff; /* white text */
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  h3 {
+    color: #C2185B; /* pink */
+  }
+  

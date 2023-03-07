@@ -1,0 +1,36 @@
+
+  body {
+    background-color: #FCE4EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .page {
+    background-color: #F8BBD0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    color: #C2185B;
+  }
+  
+  p {
+    color: #C2185B;
+  }
+  
+  .contact {
+    margin-top: 20px;
+  }
+  
+  a {
+    color: #C2185B;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+

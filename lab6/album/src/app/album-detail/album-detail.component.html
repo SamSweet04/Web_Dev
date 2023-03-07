@@ -1,18 +1,18 @@
-<div *ngIf = "loaded">
-
+<button (click)="Back()" class = "back">Back</button>
+<button (click)="goForward() "class = "forward">Forward</button>
+<div class = "container">
+  <div *ngIf = "loaded">
     <div class="main">
-        <!-- <button routerLink="/albums" class="back">Go back</button> -->
-        <button (click)="Back()">Go back</button>
         <div class="info" *ngIf="album">
           <h2>{{ album.title }}</h2>
-          <div class="changeTitle">
-            <label for="title-input">Change title: </label>
-            <input type="text" id="title-input" [(ngModel)]="albumTitle" />
-            <button class="saveBtn" (click)="update()">Save</button>
+          <div class="change-title">
+            <label for="input">Change title: </label>
+            <input type="text" id="input" [(ngModel)]="albumTitle" />
+            <button class="save"  (click)="update()">Save</button>
+            <button (click)="viewPhotos()" class = "show">Show photos</button>
           </div>
-          <div>
-            <a (click)="viewPhotos()">Show photos</a>
-          </div>
+          
         </div>
       </div>
 <h3 *ngIf = "!loaded"> Album item is loading </h3>
+</div>

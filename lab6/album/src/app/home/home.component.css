@@ -1,0 +1,35 @@
+.container {
+    background-color: #fce4ec; /* light pink */
+    padding: 20px;
+    border-radius: 10px;
+    color: #C2185B; /* pink */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: #C2185B; /* pink */
+    text-decoration: none;
+    display: inline-block;
+    font-size:  20px;
+    margin: 10px 0;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #f8bbd0; /* light pink */
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #E75480; /* pink */
+    color: #fff; /* white text */
+  }
+  

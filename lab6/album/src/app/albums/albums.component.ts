@@ -3,6 +3,8 @@ import { Album } from '../models';
 // import { ALBUMS } from '../fake-db';
 import { AlbumService } from '../album.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-albums',
@@ -12,12 +14,12 @@ import { Router } from '@angular/router';
 export class AlbumsComponent implements OnInit{
 
   albums: Album[];
-  newAlbum: Album;
+  newAlbum: string;
   loaded : boolean;
 
-   constructor(private albumService : AlbumService, private router: Router){
+   constructor(private albumService : AlbumService, private router: Router,private location: Location){
     this.albums=[];
-    this.newAlbum = {} as Album;
+    this.newAlbum = '';
     this.loaded = false;
    }
    ngOnInit(): void {
@@ -33,17 +35,26 @@ export class AlbumsComponent implements OnInit{
   }
     )}
 
+  addAlbum() {
+    const album = {
+      title: this.newAlbum
+    };
+    this.loaded = false;
+    this.albumService.addAlbum(album as Album).subscribe((album) => {
+      this.albums.push(album);
+      this.newAlbum = '';
+      this.loaded = true;
+    });
+  }
 
- addAlbum(){
-  this.loaded = false;
-  this.albumService.addAlbum(this.newAlbum).subscribe((album) => {
-  this.albums.unshift(album);
-  this.loaded = true;
-  this.newAlbum = {} as Album;
-  })
- }
  deleteAlbum(album: Album) {
   this.albumService.deleteAlbum(album.id);
   this.albums = this.albums.filter((a) => a !== album);
+}
+Back(): void {
+  this.location.back();
+}
+ goForward(): void {
+  this.location.forward();
 }
 }

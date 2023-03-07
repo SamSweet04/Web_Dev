@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http"
 import { Observable, catchError, throwError} from "rxjs"
 import { Album } from "./models";
 import { Photos } from "./photos";
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({ // available everywhere inside of the class
     providedIn: 'root'
@@ -26,12 +27,14 @@ export class AlbumService {
     addAlbum(album : Album): Observable<Album>{
         return this.client.post<Album>(`${this.BASE_URL}/albums`, album)
     }
+    updateAlbum(album: Album): Observable<Album> {
+        return this.client.put<Album>(`${this.BASE_URL}/albums/${album.id}`, album);
+      }
     updateAlbumTitle(id: number, newTitle: string): Observable<any> {
         return this.client.put(`${this.BASE_URL}/albums/${id}`, { title: newTitle })
           .pipe(catchError((error) => throwError(error)));
       }
-      deleteAlbum(id: number) {
-        return fetch(`'https://jsonplaceholder.typicode.com/albums'/${id}`, {  method: 'DELETE', });
-      }
-      
+    deleteAlbum(id: number) {
+    return fetch(`'https://jsonplaceholder.typicode.com/albums'/${id}`, {  method: 'DELETE', });
     }
+}

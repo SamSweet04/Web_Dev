@@ -1,11 +1,14 @@
-<div class="main">
-    <button (click)="Back()">Go back</button>
+<button (click)="Back()" class = "back">Back</button>
+
+<div class = "gallery">
+  <div class="main">
     <div class="album">
-      <h2>Album &#8470;{{ albumId }}</h2>
+      <h2>Gallery number:{{ albumId }}</h2>
       <div class="items">
         <div class="photo" *ngFor="let photo of photos">
-          <img src="{{ photo.url }}" class="img-fluid" />
+          <img src="{{ photo.url }}" class="paletra" />
         </div>
       </div>
     </div>
   </div>
+</div>

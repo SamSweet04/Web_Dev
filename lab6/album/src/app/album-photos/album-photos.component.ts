@@ -29,4 +29,5 @@ export class AlbumPhotosComponent implements OnInit {
   Back(): void {
     this.location.back();
   }
+
 }

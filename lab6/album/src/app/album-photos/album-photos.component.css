@@ -1,0 +1,53 @@
+/* Set background color */
+body {
+    background-color: #FADCD9;
+  }
+  
+  /* Style back and forward buttons */
+  .back, .forward {
+    background-color: #E75480;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Style main container */
+  .gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style album title */
+  .album h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #E75480;
+  }
+  
+  /* Style photo container */
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+/* Style individual photo */
+.photo {
+    margin: 10px;
+  }
+  
+  /* Style individual photo image */
+  .photo img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #E75480; /* Add border */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  }
+  
+  
